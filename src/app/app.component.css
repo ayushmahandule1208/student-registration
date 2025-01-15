@@ -1,4 +1,4 @@
-/* Global Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +14,6 @@
   }
   
  /* Navbar Styles */
-/* Navbar Styles */
 .navbar {
     width: 100%;
     padding: 15px 20px;
@@ -30,7 +29,7 @@
   
   .navbar-content {
     display: flex;
-    justify-content: space-between; /* Title on left, login button on right */
+    justify-content: space-between; 
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
@@ -58,10 +57,10 @@
     transform: scale(1.05);
   }
   
-  /* Responsive Design */
+ 
   @media (max-width: 768px) {
     .navbar-content {
-      flex-direction: column; /* Stacks the title and button vertically */
+      flex-direction: column; 
       gap: 10px;
       text-align: center;
     }
@@ -77,10 +76,9 @@
     }
   }
   
-  /* Responsive Design */
   @media (max-width: 768px) {
     .navbar {
-      flex-direction: column; /* Stack items vertically on smaller screens */
+      flex-direction: column;
       gap: 10px;
       text-align: center;
     }
@@ -95,27 +93,23 @@
       padding: 8px 15px;
     }
   }
-  
-  
-  
-  /* Container Styles */
+
 .container {
     display: flex;
-    justify-content: space-between; /* Panels on the left and right */
-    align-items: center; /* Vertically center the panels */
+    justify-content: space-between;
+    align-items: center; 
     width: 100%;
-    height: 100vh; /* Full height of the viewport */
+    height: 100vh; 
     max-width: 1200px;
     margin-top: 20px;
     padding: 20px;
     gap: 30px;
     flex:1;
     flex-wrap: nowrap;
-    margin-left: auto; /* Center the container horizontally */
-    margin-right: auto; /* Center the container horizontally */
+    margin-left: auto; 
+    margin-right: auto; 
 }
 
-/* Align panels left and right */
 .registration-panel, .message-panel, .error-panel {
     background-color: #fff;
     font-family: 'Roboto', sans-serif;
@@ -124,10 +118,9 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     width: 48%;
     transition: all 0.3s ease;
-    margin-bottom: 20px; /* Ensure space between panels */
+    margin-bottom: 20px; 
 }
 
-/* Remove the margin-top from message-panel to align them properly */
 .message-panel, .error-panel {
     margin-top: 0;
 }
@@ -184,48 +177,44 @@
     background-color: #334d8d;
   }
   
-  /* Message Panel */
+
   .message-panel, .error-panel {
     background-color: #fff;
-    padding: 40px; /* Increased padding for better spacing inside the panel */
-    border-radius: 12px; /* Slightly rounded corners */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
-    width: 48%; /* Keep panels side by side */
-    margin-top: 20px; /* Add space between the two panels */
+    padding: 40px; 
+    border-radius: 12px; 
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1); 
+    width: 48%; 
+    margin-top: 20px; 
     transition: all 0.3s ease;
 }
 
-/* Success Message Styling */
+
 .success-message {
-    font-size: 32px; /* Increase the size slightly for emphasis */
-    color: #4caf50; /* Green color for success */
+    font-size: 32px; 
+    color: #4caf50;
     font-weight: bold;
-    margin-bottom: 15px; /* Space below the success message */
-}
+    margin-bottom: 15px; 
 
-/* Error Message Styling */
+
 .error-message {
-    font-size: 28px; /* Slightly larger for emphasis */
-    color: #f44336; /* Red color for error */
+    font-size: 28px; 
+    color: #f44336;
     font-weight: bold;
-    margin-bottom: 15px; /* Space below the error message */
+    margin-bottom: 15px;
 }
 
-/* Paragraph Styling inside the panels */
 .message-panel p, .error-panel p {
     font-size: 16px;
-    color: #555; /* Light gray color for better readability */
-    margin-top: 10px; /* Add some space above paragraphs */
-    line-height: 1.6; /* Improve readability with line spacing */
-}
+    color: #555; 
+    margin-top: 10px; 
+    line-height: 1.6; 
 
-/* Additional Styling for Better Spacing Between Text */
+
 .message-panel p:not(:first-child), .error-panel p:not(:first-child) {
-    margin-top: 20px; /* Add more space between consecutive lines of text */
+    margin-top: 20px;
 }
 
-  
-  /* Media Query for Mobile */
+
   @media (max-width: 768px) {
     .container {
       flex-direction: column;

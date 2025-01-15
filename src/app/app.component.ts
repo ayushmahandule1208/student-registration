@@ -13,17 +13,16 @@ export class AppComponent {
   student = { name: '', email: '', mobile: '' };
   submittedData: { name: string; email: string; mobile: string } | null = null;
   submissionError: boolean = false;
-  isLoading: boolean = false;  // Add isLoading property
+  isLoading: boolean = false;  
 
   submitForm() {
     if (this.validateInput()) {
-      this.isLoading = true; // Show loading spinner when form is being submitted
-      setTimeout(() => {  // Simulate an async operation
+      this.isLoading = true; 
+      setTimeout(() => {  
         this.submittedData = { ...this.student };
-        this.submissionError = false; // Reset error state
-        this.isLoading = false; // Hide loading spinner after submission
-        this.resetForm();
-      }, 2000);  // Simulate a delay (2 seconds)
+        this.submissionError = false; 
+        this.isLoading = false;
+      }, 2000); 
     } else {
       this.submissionError = true;
     }
