@@ -1,0 +1,258 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f8fa;
+    color: #333;
+  }
+  
+ /* Navbar Styles */
+/* Navbar Styles */
+.navbar {
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #3b5998;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-family: 'Roboto', sans-serif;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-content {
+    display: flex;
+    justify-content: space-between; /* Title on left, login button on right */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .navbar-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+  }
+  
+  .login-button {
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    padding: 10px 20px;
+    background-color: #444;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .login-button:hover {
+    background-color: #666;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar-content {
+      flex-direction: column; /* Stacks the title and button vertically */
+      gap: 10px;
+      text-align: center;
+    }
+  
+    .navbar-title {
+      font-size: 20px;
+      font-family: 'Roboto', sans-serif;
+    }
+  
+    .login-button {
+      font-size: 14px;
+      padding: 8px 15px;
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+      gap: 10px;
+      text-align: center;
+    }
+  
+    .navbar-title {
+      font-size: 20px;
+    }
+
+  
+    .login-button {
+      font-size: 14px;
+      padding: 8px 15px;
+    }
+  }
+  
+  
+  
+  /* Container Styles */
+.container {
+    display: flex;
+    justify-content: space-between; /* Panels on the left and right */
+    align-items: center; /* Vertically center the panels */
+    width: 100%;
+    height: 100vh; /* Full height of the viewport */
+    max-width: 1200px;
+    margin-top: 20px;
+    padding: 20px;
+    gap: 30px;
+    flex:1;
+    flex-wrap: nowrap;
+    margin-left: auto; /* Center the container horizontally */
+    margin-right: auto; /* Center the container horizontally */
+}
+
+/* Align panels left and right */
+.registration-panel, .message-panel, .error-panel {
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 48%;
+    transition: all 0.3s ease;
+    margin-bottom: 20px; /* Ensure space between panels */
+}
+
+/* Remove the margin-top from message-panel to align them properly */
+.message-panel, .error-panel {
+    margin-top: 0;
+}
+
+.registration-panel h2, .message-panel h2, .error-panel h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #3b5998;
+}
+
+  
+  .registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .form-group input {
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .form-group input:focus {
+    border-color: #3b5998;
+  }
+  
+  .submit-button {
+    padding: 12px 0;
+    background-color: #3b5998;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #334d8d;
+  }
+  
+  /* Message Panel */
+  .message-panel, .error-panel {
+    background-color: #fff;
+    padding: 40px; /* Increased padding for better spacing inside the panel */
+    border-radius: 12px; /* Slightly rounded corners */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
+    width: 48%; /* Keep panels side by side */
+    margin-top: 20px; /* Add space between the two panels */
+    transition: all 0.3s ease;
+}
+
+/* Success Message Styling */
+.success-message {
+    font-size: 32px; /* Increase the size slightly for emphasis */
+    color: #4caf50; /* Green color for success */
+    font-weight: bold;
+    margin-bottom: 15px; /* Space below the success message */
+}
+
+/* Error Message Styling */
+.error-message {
+    font-size: 28px; /* Slightly larger for emphasis */
+    color: #f44336; /* Red color for error */
+    font-weight: bold;
+    margin-bottom: 15px; /* Space below the error message */
+}
+
+/* Paragraph Styling inside the panels */
+.message-panel p, .error-panel p {
+    font-size: 16px;
+    color: #555; /* Light gray color for better readability */
+    margin-top: 10px; /* Add some space above paragraphs */
+    line-height: 1.6; /* Improve readability with line spacing */
+}
+
+/* Additional Styling for Better Spacing Between Text */
+.message-panel p:not(:first-child), .error-panel p:not(:first-child) {
+    margin-top: 20px; /* Add more space between consecutive lines of text */
+}
+
+  
+  /* Media Query for Mobile */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .registration-panel, .message-panel, .error-panel {
+      width: 90%;
+      margin-bottom: 20px;
+    }
+  
+    .submit-button {
+      padding: 12px;
+    }
+  }
+  .spinner {
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #3498db;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    margin-left: 10px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
